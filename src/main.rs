@@ -1,8 +1,10 @@
 extern crate regex;
 extern crate rand;
 
+mod parser;
+
 fn main() {
-    
+    parser::get_keywords();
 }
 
 #[cfg(test)]
