@@ -1,0 +1,18 @@
+language: rust
+os:
+  - linux
+  - osx
+  - windows
+rust:
+  - stable
+  - nightly
+matrix:
+  include:
+    - rust: stable
+      env: FLAGS="--no-default-features"
+    - rust: nightly
+      env: FLAGS="-Z minimal-versions"
+script:
+  - cargo build -v $FLAGS
+  - cargo doc -v $FLAGS
+  - if [ "$FLAGS" != "-Z minimal-versions" ]; then cargo test -v $FLAGS; fi
