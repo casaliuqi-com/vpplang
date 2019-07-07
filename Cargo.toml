@@ -1,0 +1,8 @@
+[package]
+name = "vpp"
+version = "0.0.1"
+authors = ["casaliuqi.com", "3442853561"]
+
+[dependencies]
+regex = "1"
+rand = "0.7"
