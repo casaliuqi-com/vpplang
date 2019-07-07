@@ -1,10 +1,11 @@
 extern crate regex;
 extern crate rand;
 
-mod parser;
+pub(crate) mod vlang_src_load;
+mod frontend;
 
 fn main() {
-    parser::get_keywords();
+    frontend::run();
 }
 
 #[cfg(test)]
