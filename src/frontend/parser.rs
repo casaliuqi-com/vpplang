@@ -21,25 +21,29 @@ mod test {
     use super::*;
     #[test]
     fn get_keywords_is_run(){
-        assert_eq!(get_keywords(),
-            vec![
-                vec!["fn".to_string(), "func".to_string(), "function".to_string()], 
-                vec!["sub".to_string(), "subroutine".to_string()], 
-                vec!["impl".to_string(), "implements".to_string()], 
-                vec!["interface".to_string()], 
-                vec!["enum".to_string()], 
-                vec!["struct".to_string()], 
-                vec!["import".to_string()], 
-                vec!["use".to_string(), "using".to_string()], 
-                vec!["as".to_string()], 
-                vec!["macro".to_string()], 
-                vec!["for".to_string()], 
-                vec!["in".to_string()], 
-                vec!["mod".to_string(), "module".to_string()], 
-                vec!["mut".to_string(), "mutable".to_string()], 
-                vec!["return".to_string()], 
-                vec!["let".to_string()]
-            ]
-        );
+        let temp: Vec<Vec<String>> = vec![
+            vec!["fn", "func", "function"], 
+            vec!["sub", "subroutine"], 
+            vec!["impl", "implements"], 
+            vec!["interface"], 
+            vec!["enum"], 
+            vec!["struct"], 
+            vec!["import"], 
+            vec!["use", "using"], 
+            vec!["as"], 
+            vec!["macro"], 
+            vec!["for"], 
+            vec!["in"], 
+            vec!["mod", "module"], 
+            vec!["mut", "mutable"], 
+            vec!["return"], 
+            vec!["let"]
+        ].into_iter()
+         .map(|x| 
+            x.into_iter()
+             .map(|y| y.to_string())
+             .collect()
+         ).collect();
+        assert_eq!(get_keywords(), temp);
     }
 }
