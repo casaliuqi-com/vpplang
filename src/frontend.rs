@@ -20,6 +20,11 @@ fn init() {
     });
 }
 
+#[cfg(test)]
+pub(crate) fn init_test() {
+    init();
+}
+
 pub fn run(){
     init();
 }
