@@ -6,4 +6,4 @@ V++ is a modern programming language implemented with Rust and V.
 
 ## Roadmap
 
-![20190715_roadmap](images/20190715_roadmap.png)
+![20190715_roadmap](images/20190729_roadmap.png)
